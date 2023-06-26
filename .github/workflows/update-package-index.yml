@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Split owner/repo
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         run: |
           echo "::set-env name=OWNER::$(cut -d/ -f1 <<< ${{ github.repository }})"
           echo "::set-env name=REPO::$(cut -d/ -f2 <<< ${{ github.repository }})"
