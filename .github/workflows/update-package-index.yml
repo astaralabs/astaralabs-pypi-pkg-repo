@@ -23,7 +23,7 @@ jobs:
             --secret ${{ secrets.ASTARALABS_PYPI_PKG_REPO_TOKEN }}
             --owner ${{ env.OWNER }}
             --repo ${{ env.REPO }}
-            --branch master
+            --branch main
             --index_filename index.toml
 
       - run: mkdir gh-pages
@@ -36,7 +36,7 @@ jobs:
             --token ${{ secrets.ASTARALABS_PYPI_PKG_REPO_TOKEN }}
             --owner ${{ env.OWNER }}
             --repo ${{ env.REPO }}
-            --branch master
+            --branch main
             --index_filename index.toml
             --output_folder gh-pages
       - name: Publish public github pages.
