@@ -2,7 +2,7 @@ name: update-index
 on:
   push:
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/20 * * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
